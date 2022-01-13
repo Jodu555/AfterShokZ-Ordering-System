@@ -1,0 +1,21 @@
+{
+	"name": "aftershokz-ordering-system",
+	"version": "1.0.0",
+	"description": "An File Ordering System to work with the AfterShokZ under water headphones",
+	"main": "src/index.js",
+	"scripts": {
+		"start": "node src/index.js",
+		"dev": "nodemon src/index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Jodu555/AfterShokZ-Ordering-System.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Jodu555/AfterShokZ-Ordering-System/issues"
+	},
+	"homepage": "https://github.com/Jodu555/AfterShokZ-Ordering-System#readme"
+}
