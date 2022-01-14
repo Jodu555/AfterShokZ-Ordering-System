@@ -13,12 +13,11 @@ dirs.forEach(dir => {
         const files = fs.readdirSync(path.join(filesPath, dir)).map(e => {
             return { path: path.join(filesPath, dir, e), name: e };
         });
-        console.log(files);
         fs.mkdirSync(path.join(AFTERSHOKZ_DIRECTORY, name));
         files.forEach(file => {
             const dest = path.join(AFTERSHOKZ_DIRECTORY, name, file.name)
-            console.log(file.path, dest);
             fs.copyFileSync(file.path, dest)
+            console.log('Copied: ' + file.name + ' from ' + name);
         });
     }
 });
