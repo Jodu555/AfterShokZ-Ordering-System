@@ -10,7 +10,8 @@ const dirs = fs.readdirSync(filesPath).sort();
 dirs.forEach(dir => {
     if (!exclude.includes(dir)) {
         const name = dir.split('-')[1];
-        const files = fs.readdirSync(path.join(filesPath, dir));
-        console.log(name, files);
+        const files = fs.readdirSync(path.join(filesPath, dir)).map(e => path.join(filesPath, dir, e));
+        console.log(files);
+        // fs.copyFileSync()
     }
 });
