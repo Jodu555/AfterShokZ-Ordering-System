@@ -7,6 +7,7 @@ const exclude = ['OLD'];
 const dirs = fs.readdirSync(filesPath).sort();
 
 dirs.forEach(dir => {
-    const name = dir.split('-')[1];
-    console.log(name);
+    if (!exclude.includes(dir)) {
+        const name = dir.split('-')[1];
+    }
 });
