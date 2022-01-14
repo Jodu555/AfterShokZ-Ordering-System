@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path')
 
-const AFTERSHOKZ_DIRECTORY = 'E://';
+const AFTERSHOKZ_DIRECTORY = 'I://Test';
 const filesPath = 'D://Allgemein//Ich//Hobbys//Musik//Xtrainerz';
 const exclude = ['OLD'];
 
@@ -14,10 +14,11 @@ dirs.forEach(dir => {
             return { path: path.join(filesPath, dir, e), name: e };
         });
         console.log(files);
+        fs.mkdirSync(path.join(AFTERSHOKZ_DIRECTORY, name));
         files.forEach(file => {
             const dest = path.join(AFTERSHOKZ_DIRECTORY, name, file.name)
             console.log(file.path, dest);
-            // fs.copyFileSync()
+            fs.copyFileSync(file.path, dest)
         });
     }
 });
