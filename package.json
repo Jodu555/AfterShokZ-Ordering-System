@@ -17,5 +17,8 @@
 	"bugs": {
 		"url": "https://github.com/Jodu555/AfterShokZ-Ordering-System/issues"
 	},
-	"homepage": "https://github.com/Jodu555/AfterShokZ-Ordering-System#readme"
+	"homepage": "https://github.com/Jodu555/AfterShokZ-Ordering-System#readme",
+	"dependencies": {
+		"@jodu555/commandmanager": "^1.4.3"
+	}
 }
