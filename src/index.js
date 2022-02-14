@@ -19,10 +19,11 @@ dirs.forEach(dir => {
             return { path: path.join(filesPath, dir, e), name: e };
         });
         fs.mkdirSync(path.join(AFTERSHOKZ_DIRECTORY, name));
-        files.forEach(file => {
+        files.forEach((file, i) => {
             const dest = path.join(AFTERSHOKZ_DIRECTORY, name, file.name)
             fs.copyFileSync(file.path, dest)
-            console.log('Copied: ' + file.name + ' from ' + name);
+            commandManager.getWriter().deepSameLineClear(`Copied: ${file.name} from ${name}   ${i}/${files.length}`);
         });
+        commandManager.getWriter().end();
     }
 });
